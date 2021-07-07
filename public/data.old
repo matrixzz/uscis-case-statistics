@@ -1,203 +1,270 @@
 {
   "LIN|21|901|24|I-102|Case Was Approved": {
     "18810": 1,
+    "18811": 1,
   },
   "LIN|21|901|24|I-130|Case Was Rejected Because It Was Improperly Filed": {
     "18810": 1,
+    "18811": 1,
   },
   "LIN|21|901|24|I-131|Case Rejected Because I Sent An Incorrect Fee": {
     "18810": 3,
+    "18811": 3,
   },
   "LIN|21|901|24|I-131|Case Rejected For Incorrect Fee And Form Not Signed": {
     "18810": 1,
+    "18811": 1,
   },
   "LIN|21|901|24|I-131|Case Was Approved": {
     "18810": 43,
+    "18811": 41,
   },
   "LIN|21|901|24|I-131|Case Was Denied": {
     "18810": 9,
+    "18811": 9,
   },
   "LIN|21|901|24|I-131|Case Was Received": {
     "18810": 157,
+    "18811": 157,
   },
   "LIN|21|901|24|I-131|Case Was Rejected Because I Did Not Sign My Form": {
     "18810": 1,
+    "18811": 1,
   },
   "LIN|21|901|24|I-131|Case Was Rejected Because It Was Improperly Filed": {
     "18810": 8,
+    "18811": 8,
   },
   "LIN|21|901|24|I-131|Case Was Updated To Show Fingerprints Were Taken": {
     "18810": 43,
+    "18811": 43,
   },
   "LIN|21|901|24|I-131|Date of Birth Was Updated": {
     "18810": 1,
+    "18811": 1,
   },
   "LIN|21|901|24|I-131|Fingerprint Fee Was Received": {
     "18810": 9,
+    "18811": 9,
   },
   "LIN|21|901|24|I-131|Name Was Updated": {
     "18810": 7,
+    "18811": 5,
   },
   "LIN|21|901|24|I-131|Notice Explaining USCIS Actions Was Mailed": {
     "18810": 2,
+    "18811": 2,
   },
   "LIN|21|901|24|I-131|Notice Was Returned To USCIS Because The Post Office Could Not Deliver It": {
     "18810": 6,
+    "18811": 6,
   },
   "LIN|21|901|24|I-131|Refugee Travel Document Was Produced": {
     "18810": 4,
+    "18811": 2,
   },
   "LIN|21|901|24|I-131|Request for Additional Information Received": {
     "18810": 1,
+    "18811": 1,
   },
   "LIN|21|901|24|I-140|Case Rejected Because I Sent An Incorrect Fee": {
     "18810": 1,
+    "18811": 1,
   },
   "LIN|21|901|24|I-140|Case Was Approved": {
     "18810": 19,
+    "18811": 20,
   },
   "LIN|21|901|24|I-140|Case Was Approved And My Decision Was Emailed": {
     "18810": 21,
+    "18811": 20,
   },
   "LIN|21|901|24|I-140|Case Was Received": {
     "18810": 69,
+    "18811": 69,
   },
   "LIN|21|901|24|I-140|Case Was Received and A Receipt Notice Was Sent": {
     "18810": 1,
+    "18811": 1,
   },
   "LIN|21|901|24|I-140|Case Was Rejected Because It Was Improperly Filed": {
     "18810": 3,
+    "18811": 3,
   },
   "LIN|21|901|24|I-140|Notice Was Returned To USCIS Because The Post Office Could Not Deliver It": {
     "18810": 6,
+    "18811": 6,
   },
   "LIN|21|901|24|I-140|Petition/Application Was Rejected For Insufficient Funds": {
     "18810": 1,
+    "18811": 1,
   },
   "LIN|21|901|24|I-140|Response To USCIS' Request For Evidence Was Received": {
     "18810": 1,
+    "18811": 1,
   },
   "LIN|21|901|24|I-212|Case Was Approved": {
     "18810": 1,
+    "18811": 1,
   },
   "LIN|21|901|24|I-360|Case Was Received": {
     "18810": 1,
+    "18811": 1,
   },
   "LIN|21|901|24|I-485|Case Rejected Because I Sent An Incorrect Fee": {
     "18810": 1,
+    "18811": 1,
   },
   "LIN|21|901|24|I-485|Case Was Received": {
     "18810": 6,
+    "18811": 6,
   },
   "LIN|21|901|24|I-485|Case Was Rejected Because It Was Improperly Filed": {
     "18810": 6,
+    "18811": 6,
   },
   "LIN|21|901|24|I-485|Case Was Updated To Show Fingerprints Were Taken": {
     "18810": 165,
+    "18811": 165,
   },
   "LIN|21|901|24|I-485|Fee Will Be Refunded": {
     "18810": 1,
+    "18811": 1,
   },
   "LIN|21|901|24|I-485|Fingerprint Fee Was Received": {
     "18810": 21,
+    "18811": 21,
   },
   "LIN|21|901|24|I-485|Notice Was Returned To USCIS Because The Post Office Could Not Deliver It": {
     "18810": 1,
+    "18811": 1,
   },
   "LIN|21|901|24|I-539|Case Rejected Because I Sent An Incorrect Fee": {
     "18810": 3,
+    "18811": 3,
   },
   "LIN|21|901|24|I-539|Case Rejected For Incorrect Fee And Form Not Signed": {
     "18810": 1,
+    "18811": 1,
   },
   "LIN|21|901|24|I-539|Case Was Updated To Show Fingerprints Were Taken": {
     "18810": 13,
+    "18811": 13,
   },
   "LIN|21|901|24|I-539|Fingerprint Fee Was Received": {
     "18810": 4,
+    "18811": 4,
   },
   "LIN|21|901|24|I-601|Case Was Rejected Because It Was Improperly Filed": {
     "18810": 4,
+    "18811": 4,
   },
   "LIN|21|901|24|I-601|Case Was Updated To Show Fingerprints Were Taken": {
     "18810": 4,
+    "18811": 4,
   },
   "LIN|21|901|24|I-601|Fingerprint Fee Was Received": {
     "18810": 2,
+    "18811": 2,
   },
   "LIN|21|901|24|I-751|Case Was Received": {
     "18810": 8,
+    "18811": 8,
   },
   "LIN|21|901|24|I-751|Case Was Updated To Show Fingerprints Were Taken": {
     "18810": 43,
+    "18811": 43,
   },
   "LIN|21|901|24|I-751|Notice Was Returned To USCIS Because The Post Office Could Not Deliver It": {
     "18810": 1,
+    "18811": 1,
   },
   "LIN|21|901|24|I-751|Petition/Application Was Rejected For Insufficient Funds": {
     "18810": 1,
+    "18811": 1,
   },
   "LIN|21|901|24|I-751|Request for Additional Evidence Was Sent": {
     "18810": 3,
+    "18811": 3,
   },
   "LIN|21|901|24|I-765|Case Rejected Because I Sent An Incorrect Fee": {
     "18810": 1,
+    "18811": 1,
   },
   "LIN|21|901|24|I-765|Case Was Approved": {
     "18810": 1,
+    "18811": 1,
   },
   "LIN|21|901|24|I-765|Case Was Denied": {
     "18810": 7,
+    "18811": 7,
   },
   "LIN|21|901|24|I-765|Case Was Received": {
     "18810": 24,
+    "18811": 24,
   },
   "LIN|21|901|24|I-765|Case Was Rejected Because It Was Improperly Filed": {
     "18810": 6,
+    "18811": 6,
   },
   "LIN|21|901|24|I-765|Case Was Transferred And A New Office Has Jurisdiction": {
     "18810": 4,
+    "18811": 4,
   },
   "LIN|21|901|24|I-765|Case Was Updated To Show Fingerprints Were Taken": {
     "18810": 155,
+    "18811": 155,
   },
   "LIN|21|901|24|I-765|Expedite Request Denied": {
     "18810": 2,
+    "18811": 2,
   },
   "LIN|21|901|24|I-765|Fees Were Waived": {
     "18810": 1,
+    "18811": 1,
   },
   "LIN|21|901|24|I-765|Notice Was Returned To USCIS Because The Post Office Could Not Deliver It": {
     "18810": 3,
+    "18811": 3,
   },
   "LIN|21|901|24|I-765|Request for Additional Evidence Was Sent": {
     "18810": 1,
+    "18811": 1,
   },
   "LIN|21|901|24|I-765|Response To USCIS' Request For Evidence Was Received": {
     "18810": 2,
+    "18811": 2,
   },
   "LIN|21|901|24|I-824|Case Was Received": {
     "18810": 5,
+    "18811": 5,
   },
   "LIN|21|901|24|unknown form type|Biometrics Appointment Was Scheduled": {
     "18810": 1,
+    "18811": 1,
   },
   "LIN|21|901|24|unknown form type|CASE STATUS": {
     "18810": 7,
+    "18811": 13,
   },
   "LIN|21|901|24|unknown form type|Card Was Delivered To Me By The Post Office": {
     "18810": 45,
+    "18811": 46,
   },
   "LIN|21|901|24|unknown form type|Card Was Picked Up By The United States Postal Service": {
     "18810": 7,
+    "18811": 6,
   },
   "LIN|21|901|24|unknown form type|Case Was Approved": {
     "18810": 2,
+    "18811": 2,
   },
   "LIN|21|901|24|unknown form type|Case Was Denied": {
     "18810": 1,
+    "18811": 1,
   },
   "LIN|21|901|24|unknown form type|Form G-28 Was Rejected Because It Was Improperly Filed": {
     "18810": 15,
+    "18811": 15,
   },
 }
