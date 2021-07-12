@@ -28,7 +28,7 @@ const getCaseID = (
   two_digit_yr.toString() +
   day.toString().padStart(3, "0") +
   code.toString() +
-  case_serial_numbers.toString().padStart(3, "0");
+  case_serial_numbers.toString().padStart(4, "0");
 
 const getStatus = async (
   url: string,
@@ -122,18 +122,19 @@ const claw = async (
   code: number
 ): Promise<void> => {
   // const last = await getLastCaseNumber(center_name, two_digit_yr, day, code);
-  const last = 999;
+  const last = 5500;
   // last = 800;
   if (last <= 0) {
     console.log(`No entires for ${center_name} day ${day}`);
     return;
   }
+  const first = 2500;
 
-  console.log(`Loading ${last} entires for ${center_name} day ${day}`);
+  console.log(`Loading ${last-first+1} entires for ${center_name} day ${day}`);
   const results = (
     await Promise.all(
       lodash
-        .range(1, last + 1)
+        .range(first, last + 1)
         .map((case_number) =>
           getStatus(
             BASE_URL +
@@ -179,13 +180,13 @@ const claw = async (
     }),
     { encoding: "utf8" }
   );
-  console.log(`Finished ${last} entires for ${center_name} day ${day}`);
+  console.log(`Finished ${last - first} entires for ${center_name} day ${day}`);
 };
 
 // (async () => {
   // for (const d of lodash.range(1, 350)) {
     // await Promise.all(
-      Constants.CENTER_NAMES.map((name) => claw(name, 21, 901, 24));
+      Constants.CENTER_NAMES.map((name) => claw(name, 21, 901, 2));
     // );
   // }
 // })();
