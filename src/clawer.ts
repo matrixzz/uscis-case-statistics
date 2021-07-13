@@ -26,8 +26,8 @@ const getCaseID = (
 ) =>
   center_name +
   two_digit_yr.toString() +
-  day.toString().padStart(3, "0") +
   code.toString() +
+  day.toString().padStart(3, "0") +
   case_serial_numbers.toString().padStart(4, "0");
 
 const getStatus = async (
@@ -115,6 +115,31 @@ const getLastCaseNumber = async (
   return low - 1;
 };
 
+const sleep = (milliseconds: number) => {
+  return new Promise(resolve => setTimeout(resolve, milliseconds))
+};
+
+const getStatusSync = (
+    center_name: string,
+    two_digit_yr: number,
+    day: number,
+    code: number,
+    case_numbers: number[]) => {
+    return Promise.all(case_numbers.map((case_number) => getStatus(
+        BASE_URL +
+        getCaseID(center_name, two_digit_yr, day, code, case_number)
+    )))
+};
+
+const sliceCaseNumbers = (array: number[], size: number) => {
+  let [...arr]  = array;
+  var res = [];
+  while (arr.length) {
+    res.push(arr.splice(0, size));
+  }
+  return res;
+}
+
 const claw = async (
   center_name: string,
   two_digit_yr: number,
@@ -122,29 +147,28 @@ const claw = async (
   code: number
 ): Promise<void> => {
   // const last = await getLastCaseNumber(center_name, two_digit_yr, day, code);
-  const last = 5500;
+  const last = 9999;
   // last = 800;
   if (last <= 0) {
     console.log(`No entires for ${center_name} day ${day}`);
     return;
   }
-  const first = 2500;
+  const first = 0;
 
   console.log(`Loading ${last-first+1} entires for ${center_name} day ${day}`);
-  const results = (
-    await Promise.all(
-      lodash
-        .range(first, last + 1)
-        .map((case_number) =>
-          getStatus(
-            BASE_URL +
-            getCaseID(center_name, two_digit_yr, day, code, case_number)
-          )
-        )
-    )
-  )
+  const case_numbers_array = sliceCaseNumbers(lodash.range(first, last + 1), 500);
+  const results_arrays = [];
+  for (var case_numbers of case_numbers_array) {
+      console.log(`Getting case number: ${case_numbers[0]} - ${case_numbers[case_numbers.length-1]}`)
+      let res = await getStatusSync(center_name, two_digit_yr, day, code, case_numbers);
+      results_arrays.push(res);
+  }
+  const results = results_arrays
+    .reduce((arr, val) => arr.concat(val), [])
     .filter(Boolean)
     .map((x) => nullthrows(x));
+  console.log("results.size is " + results.length);
+  console.log("results[0] is " + JSON5.stringify(results[0]));
 
   const counter = results
     .reduce((counter, res) => {
@@ -161,7 +185,7 @@ const claw = async (
   const new_json5_obj = { ...json5_obj };
 
   Object.entries(counter).forEach(([key, count]) => {
-    new_json5_obj[key] = { ...(new_json5_obj[key] ?? {}), ...count };
+    new_json5_obj[key] = { ...(new_json5_obj[key] ?? {}), ...(count as object) };
   });
 
   Object.entries(new_json5_obj).forEach(([key, count]) => {
@@ -180,13 +204,13 @@ const claw = async (
     }),
     { encoding: "utf8" }
   );
-  console.log(`Finished ${last - first} entires for ${center_name} day ${day}`);
+  console.log(`Finished ${new_json5_obj.size} entires for ${center_name} day ${day}`);
 };
 
-// (async () => {
-  // for (const d of lodash.range(1, 350)) {
-    // await Promise.all(
-      Constants.CENTER_NAMES.map((name) => claw(name, 21, 901, 2));
-    // );
-  // }
-// })();
+(async () => {
+  for (const d of lodash.range(12, 13)) {
+    await Promise.all(
+      Constants.CENTER_NAMES.map((name) => claw(name, 21, d, 9))
+    );
+  }
+})();
