@@ -115,10 +115,6 @@ const getLastCaseNumber = async (
   return low - 1;
 };
 
-const sleep = (milliseconds: number) => {
-  return new Promise(resolve => setTimeout(resolve, milliseconds))
-};
-
 const getStatusSync = (
     center_name: string,
     two_digit_yr: number,
@@ -148,7 +144,6 @@ const claw = async (
 ): Promise<void> => {
   // const last = await getLastCaseNumber(center_name, two_digit_yr, day, code);
   const last = 9999;
-  // last = 800;
   if (last <= 0) {
     console.log(`No entires for ${center_name} day ${day}`);
     return;
@@ -168,7 +163,6 @@ const claw = async (
     .filter(Boolean)
     .map((x) => nullthrows(x));
   console.log("results.size is " + results.length);
-  console.log("results[0] is " + JSON5.stringify(results[0]));
 
   const counter = results
     .reduce((counter, res) => {
