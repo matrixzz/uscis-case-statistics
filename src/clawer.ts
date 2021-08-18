@@ -182,12 +182,12 @@ const claw = async (
     new_json5_obj[key] = { ...(new_json5_obj[key] ?? {}), ...(count as object) };
   });
 
-  Object.entries(new_json5_obj).forEach(([key, count]) => {
-    new_json5_obj[key] = lodash.pickBy(new_json5_obj[key], (_count, day) => Math.abs(Number.parseInt(day) - today) <= 14);
-    if (lodash.isEmpty(new_json5_obj[key])) {
-      delete new_json5_obj[key];
-    }
-  });
+  // Object.entries(new_json5_obj).forEach(([key, count]) => {
+  //   new_json5_obj[key] = lodash.pickBy(new_json5_obj[key], (_count, day) => Math.abs(Number.parseInt(day) - today) <= 30);
+  //   if (lodash.isEmpty(new_json5_obj[key])) {
+  //     delete new_json5_obj[key];
+  //   }
+  // });
 
   fs.writeFileSync(
     DATA_FILE_PATH,
